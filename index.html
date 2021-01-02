@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8"/>
-		<title>国外油画作品响应式模板html下载</title>
+		<title>Foreign oil paintings</title>
 		 
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -409,28 +409,6 @@
 </head>
 <body>
 </body>
-<script>
-    function getQueryString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return unescape(r[2]);
-        return null;
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) {
-            return decodeURIComponent(r[2]);
-        }
-        return '';
-    }
-    function checkUrl(str) {
-        var reg = /^(http|https):\/\/.*$/i;
-        return reg.test(str);
-    }
-    var origin_url = getQueryString('url');
-    if (checkUrl(origin_url)) {
-        window.location.href = origin_url;
-    } else {
-    }
-</script>
+
 
 </html>
